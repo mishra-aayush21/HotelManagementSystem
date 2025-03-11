@@ -1,4 +1,6 @@
-﻿namespace HotelManagementSystem
+﻿using System;
+
+namespace HotelManagementSystem
 {
     partial class Form1
     {
@@ -37,7 +39,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.cmbRooms = new System.Windows.Forms.ComboBox();
-            this.cmbGuest = new System.Windows.Forms.ComboBox();
+            this.cmbGuests = new System.Windows.Forms.ComboBox();
             this.btnBookRoom = new System.Windows.Forms.Button();
             this.dgvBookings = new System.Windows.Forms.DataGridView();
             this.colRoomNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -69,6 +71,7 @@
             this.btnAddRoom.TabIndex = 2;
             this.btnAddRoom.Text = "Add Room";
             this.btnAddRoom.UseVisualStyleBackColor = true;
+            this.btnAddRoom.Click += new System.EventHandler(this.btnAddRoom_Click);
             // 
             // label2
             // 
@@ -94,6 +97,7 @@
             this.btnAddGuest.TabIndex = 5;
             this.btnAddGuest.Text = "Add Guest";
             this.btnAddGuest.UseVisualStyleBackColor = true;
+            this.btnAddGuest.Click += new System.EventHandler(this.btnAddGuest_Click);
             // 
             // label3
             // 
@@ -122,13 +126,13 @@
             this.cmbRooms.TabIndex = 8;
             this.cmbRooms.SelectedIndexChanged += new System.EventHandler(this.cmbRooms_SelectedIndexChanged);
             // 
-            // cmbGuest
+            // cmbGuests
             // 
-            this.cmbGuest.FormattingEnabled = true;
-            this.cmbGuest.Location = new System.Drawing.Point(228, 284);
-            this.cmbGuest.Name = "cmbGuest";
-            this.cmbGuest.Size = new System.Drawing.Size(149, 21);
-            this.cmbGuest.TabIndex = 9;
+            this.cmbGuests.FormattingEnabled = true;
+            this.cmbGuests.Location = new System.Drawing.Point(228, 284);
+            this.cmbGuests.Name = "cmbGuests";
+            this.cmbGuests.Size = new System.Drawing.Size(149, 21);
+            this.cmbGuests.TabIndex = 9;
             // 
             // btnBookRoom
             // 
@@ -138,6 +142,7 @@
             this.btnBookRoom.TabIndex = 10;
             this.btnBookRoom.Text = "Book Room";
             this.btnBookRoom.UseVisualStyleBackColor = true;
+            this.btnBookRoom.Click += new System.EventHandler(this.btnBookRoom_Click);
             // 
             // dgvBookings
             // 
@@ -167,7 +172,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.dgvBookings);
             this.Controls.Add(this.btnBookRoom);
-            this.Controls.Add(this.cmbGuest);
+            this.Controls.Add(this.cmbGuests);
             this.Controls.Add(this.cmbRooms);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -185,6 +190,8 @@
 
         }
 
+        
+
         #endregion
 
         private System.Windows.Forms.Label label1;
@@ -196,7 +203,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cmbRooms;
-        private System.Windows.Forms.ComboBox cmbGuest;
+        private System.Windows.Forms.ComboBox cmbGuests;
         private System.Windows.Forms.Button btnBookRoom;
         private System.Windows.Forms.DataGridView dgvBookings;
         private System.Windows.Forms.DataGridViewTextBoxColumn colRoomNumber;
