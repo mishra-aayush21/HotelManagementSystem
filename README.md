@@ -47,7 +47,7 @@ Before running the application, ensure you have the following installed:
 ### Step 1: Clone the Repository
 Clone the project repository to your local machine:
 ```bash
-git clone https://github.com/your-username/hotel-management-system.git
+git clone https://github.com/mishra-aayush21/hotel-management-system.git
 ```
 
 ### Step 2: Set Up the Database
